@@ -66,6 +66,13 @@ DESTINATION_TABLE_PREFIX = "your-destination-table-prefix"
 ## Error Handling:
 - The script logs any errors that occur during table validation or query execution to the console. It also ensures that missing source tables and already existing destination tables are skipped gracefully.
 
+Example Output: 
+```python
+No source table found for date 2024-05-15. Skipping. 
+The table page_views_20240516 already exists. Skipping. 
+Table example_20240517 successfully created.
+```
+
 ##  Usage: 
 - Run the script from your terminal: python run_datesharded_queries.py
 
@@ -85,12 +92,6 @@ To modify the query logic, edit the `run_query_for_date` function:
    somethingElse 
  ORDER BY 
    total_something DESC """
-```
-Example Output: 
-```python
-No source table found for date 2024-05-15. Skipping. 
-The table page_views_20240516 already exists. Skipping. 
-Table example_20240517 successfully created.
 ```
 
 # License: 
